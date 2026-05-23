@@ -1,5 +1,6 @@
 #include <iostream>
 #include "grafo.h"
+#include "dijkstra.h"
 
 using namespace std;
 
@@ -34,6 +35,7 @@ int main() {
         cout << "3 - Remover Aresta\n";
         cout << "4 - Remover Vertice\n";
         cout << "5 - Mostrar Grafo\n";
+        cout << "6 - Menor caminho\n"; //Adicionado (Dijkstra) - Otto
         cout << "0 - Sair\n";
         cout << "============================\n";
 
@@ -99,6 +101,24 @@ int main() {
                 g.mostrar();
 
                 break;
+            }
+            //Adicionado  - Otto
+            case 6: {
+   
+                int origem, destino;
+    
+                cout << "Vertice de origem: ";
+    
+                cin >> origem;
+    
+                cout << "Vertice de destino: ";
+    
+                cin >> destino;
+    
+                dijkstra(g.getAdj(), g.getVertices(), origem, destino);
+    
+                break;
+
             }
 
             case 0: {
