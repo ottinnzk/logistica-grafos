@@ -24,6 +24,10 @@ public:
     void removerVertice(int v);
 
     void mostrar();
+
+//Chamar Minha função - Otto
+vector<vector<pair<int, int> > >& getAdj() { return adj; } 
+    int getVertices() { return vertices; }
 };
 
 #endif
