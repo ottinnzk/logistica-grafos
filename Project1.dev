@@ -101,25 +101,27 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit6]
-FileName=Makefile.win
+FileName=dijkstra.cpp
 Folder=
-Compile=0
-Link=0
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=1
 
 [Unit7]
-FileName=dijkstra.h.gch
+FileName=bfs.h
 Folder=
-Compile=0
-Link=0
+Compile=1
+Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
+CompileCpp=1
 
 [Unit8]
-FileName=dijkstra.cpp
+FileName=bfs.cpp
 CompileCpp=1
 Folder=
 Compile=1

@@ -15,7 +15,7 @@ void Grafo::inserirVertice() {
     adj.push_back(vector<pair<int, int> >());
     vertices++;
 
-    cout << "Vertice inserido com sucesso!\n";
+    cout << "Cidade inserida com sucesso!\n";
 }
 
 // Inserir aresta
@@ -24,7 +24,7 @@ void Grafo::inserirAresta(int u, int v, int peso) {
     adj[u].push_back(make_pair(v, peso));
     adj[v].push_back(make_pair(u, peso));
 
-    cout << "Aresta inserida entre "
+    cout << "Caminho inserido entre "
          << u << " e "
          << v << endl;
 }
@@ -54,7 +54,7 @@ void Grafo::removerAresta(int u, int v) {
         }
     }
 
-    cout << "Aresta removida!\n";
+    cout << "Caminho removido!\n";
 }
 
 // Remover vértice
@@ -80,17 +80,17 @@ void Grafo::removerVertice(int v) {
 
     vertices--;
 
-    cout << "Vertice removido!\n";
+    cout << "Cidade removida!\n";
 }
 
 // Mostrar lista de adjacência
 void Grafo::mostrar() {
 
-    cout << "\n===== LISTA DE ADJACENCIA =====\n";
+    cout << "\n===== CENTROS DE DISTRIBUIÇÕES =====\n";
 
     for (int i = 0; i < vertices; i++) {
 
-        cout << "Vertice " << i << ": ";
+        cout << "Cidade " << i << ": ";
 
         for (vector<pair<int, int> >::iterator it = adj[i].begin();
              it != adj[i].end();

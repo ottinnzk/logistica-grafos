@@ -6,14 +6,14 @@ using namespace std;
 
 void bfs(vector<vector<pair<int,int>>>& adj, int vertices, int origem) {
 
-    // marca todos como não visitado
+    // marca todos como nao visitado
     vector<bool> visitado(vertices, false);
 
-    // guarda a distância de saltos de cada vértice
-    // começa tudo com -1 (significa "não alcançado ainda")
+    // guarda a distancia de saltos de cada vertice
+    // comeca tudo com -1 (significa "nao alcancado ainda")
     vector<int> saltos(vertices, -1);
 
-    // fila agora guarda par de (vértice, salto atual)
+    // fila agora guarda par de (vertice, salto atual)
     queue<pair<int,int>> fila;
 
     // origem tem 0 saltos
@@ -28,12 +28,12 @@ void bfs(vector<vector<pair<int,int>>>& adj, int vertices, int origem) {
 
     while (!fila.empty()) {
 
-        // agora pega o par (vértice, salto)
+        // agora pega o par (vertice, salto)
         int atual = fila.front().first;
         int saltoAtual = fila.front().second;
         fila.pop();
 
-        // imprime o vértice e quantos saltos ele tem
+        // imprime o vertice e quantos saltos ele tem
         cout << "  Vertice " << atual 
              << " | saltos: " << saltoAtual << "\n";
 
@@ -51,7 +51,7 @@ void bfs(vector<vector<pair<int,int>>>& adj, int vertices, int origem) {
         }
     }
 
-    // ── PARTE 2: verifica conectividade ──
+    // PARTE 2: verifica conectividade
 
     cout << "\n==============================\n";
     cout << "   VERIFICACAO DE ALCANCE\n";
